@@ -1,0 +1,130 @@
+/* setup the style for preview product */
+*{
+    margin : 0;padding :0;
+    border : none;outline : none;
+    box-sizing : border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+:root{
+    --Primary-color-1 : hsl(158, 36%, 37%);
+    --Primary-color-2 : hsl(30, 38%, 92%);
+    --Neutral-color-1 : hsl(212, 21%, 14%);
+    --Neutral-color-2 : hsl(228, 12%, 48%);
+    --Neutral-color-3 : hsl(0, 0%, 100%);
+}
+body p{
+    font-size: 14px;
+}
+body{
+    background-color: var(--Primary-color-2);
+}
+
+/* style container card */
+.product{
+    margin : 5rem auto;
+    display : flex;
+    justify-content: center;
+    overflow: hidden;
+    border-radius: 8px;
+    width : 555px;
+    max-width : 90%;
+    transition: all 0.3s ease 0s;
+}
+
+/* style to devide the two parts of product */
+.product .image,.product .product-details{
+    flex : 0 0 50%;
+}
+/* style the part of image */
+.image{
+    background-image: url("./images/image-product-desktop.jpg");
+    background-size: 100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+/* style the part of details about product */
+.product-details{
+    padding : 28px;
+    background-color: var(--Neutral-color-3);
+}
+
+/* style the elements in details part */
+.product-type,
+.product-preview{
+    color : var(--Neutral-color-2);
+    margin-top : 5px;
+    margin-bottom : 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+.product-type{
+    letter-spacing: 8px;
+    text-transform: uppercase;
+}
+
+.product-title,
+.product-price-after{
+    margin-top : 21px;
+    margin-bottom : 21px;
+    font-size : 31px;
+    line-height: 90%;
+    color : var(--Neutral-color-1);
+    font-family: 'Fraunces', serif;
+    font-weight: 700;
+}
+.product-price{
+    display : flex;
+    align-items: center;
+}
+.product-price-after{
+    color : var(--Primary-color-1);
+    font-weight: 500;
+}
+.product-price-befor{
+    display : inline-block;
+    text-decoration-line: line-through;
+    margin-left : 18px;
+    color : var(--Neutral-color-2);
+}
+
+/* style the button */
+.btn{
+    display: block;
+    margin : auto;
+    width : 100%;
+    padding : 12px 18px;
+    border-radius: 5px;
+    color : var(--Neutral-color-3);
+    background-color: var(--Primary-color-1);
+    font-weight: 700;
+    display : flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease 0s;
+    font-family: 'Montserrat', sans-serif;
+}
+.btn:hover{
+    background-color: hsl(157, 69%, 15%);
+}
+.card-icon{
+    margin-right : 5px;
+}
+
+
+/* media quire for mobile model */
+
+@media (max-width : 375px){
+    .product{
+        flex-wrap: wrap;
+        margin :2.3rem auto;
+    }
+    .product .image,.product .product-details{
+        flex : 0 0 100%;
+        width : auto;
+    }
+    .image{
+        height : 213px;
+        background-image: url("./images/image-product-mobile.jpg");
+    }
+}
